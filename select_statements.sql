@@ -43,3 +43,9 @@
     where salary >= 80000
     group by(salary)
     order by(salary);
+
+-- Limiting the output records on a query
+
+    select * from salaries
+    order by emp_ DESCENDING
+    limit 10;
