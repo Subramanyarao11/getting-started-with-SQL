@@ -23,5 +23,23 @@
     SELECT COUNT(DISTINCT first_name) from employees;
 
 --Exercise
-select * from salaries where salary >= 100000;
-select count(*) from dept_manager;
+    select * from salaries where salary >= 100000;
+    select count(*) from dept_manager;
+
+
+-- ORDER BY ASCENDING & DESCENDING
+
+    select * from employees order by first_name;
+
+    select * from employees order by emp_no desc;
+
+
+    select * from employees order by hire_date desc;
+
+
+-- ORDER BY , GROUP BY AND ALIAS NAME
+
+    select salary , count(emp_no) as emps_with_same_salary from salaries
+    where salary >= 80000
+    group by(salary)
+    order by(salary);
